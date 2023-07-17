@@ -3,7 +3,7 @@ import "./Card.css";
 
 const Card = ({ title, image, content, revealContent }) => {
   return (
-    <div class="card">
+    <div class="card z-depth-4">
       <div class="card-image">
         <img src={image} />
       </div>
