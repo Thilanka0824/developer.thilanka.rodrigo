@@ -11,7 +11,8 @@ const NavBar = () => {
           <a href="#" class="brand-logo">
             Logo
           </a>
-          <button onClick={toggleTheme}>Toggle {theme} theme</button>
+          <button className="waves-effect waves-teal btn-flat" onClick={toggleTheme}>{theme}</button>
+          
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
               <a href="sass.html">Sass</a>
