@@ -12,6 +12,7 @@ const HomePage = () => {
   return (
     <div className={`home-page ${theme}-theme valign center`}>
       <NameAnimation />
+      
       <Card
         className="red lighten-3"
         title="Hi I'm Thilanka"

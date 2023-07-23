@@ -3,7 +3,7 @@ import { useState, useEffect, useContext, useRef } from "react";
 import './NameAnimation.css'
 
 const NameAnimation = () => {
-    const firstName = " Thilanka"; //fix this when you have time
+    const firstName = " Thilanka"; //I'll fix this when I have time
     const lastName = "Rodrigo";
     console.log(firstName.length);
     const [animatedName, setAnimatedName] = useState("");
@@ -21,21 +21,21 @@ const NameAnimation = () => {
           const nextChar = firstName[animatedNameRef.current.length]; // taking the next character in the string and adding it to the animated name
           setAnimatedName(animatedName + nextChar);
           animatedNameRef.current = animatedNameRef.current + nextChar;
-        }, 200);
+        }, 150);
       }
       if (lastAnimatedNameRef.current.length < lastName.length) {
         timeout = setTimeout(() => {
           const lastNextChar = lastName[lastAnimatedNameRef.current.length];
           setLastAnimatedName(lastAnimatedName + lastNextChar);
           lastAnimatedNameRef.current = lastAnimatedNameRef.current + lastNextChar;
-        }, 200);
+        }, 150);
       }
     };
   
     useEffect(() => {
       animate();
       return () => clearTimeout(timeout);
-    }, [firstName, lastName, animatedName]);
+    }, [animatedName]);
   return (
     <div className='name-container'>
         <h2 className="first-name">{animatedName}</h2>
