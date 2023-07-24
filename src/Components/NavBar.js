@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import ThemeContext from "../Hooks/themeContext";
 import "./NavBar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -13,9 +14,9 @@ const NavBar = () => {
         }`}
       >
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">
-            <i class="material-icons">devices</i>
-          </a>
+          <Link to="/" className="brand-logo">
+            <i className="material-icons">devices</i>
+          </Link>
           <button
             className="waves-effect waves-teal btn-flat"
             onClick={toggleTheme}
@@ -23,17 +24,7 @@ const NavBar = () => {
             {theme === "light" ? "dark" : "light"}
           </button>
 
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a href="sass.html">Sass</a>
-            </li>
-            <li>
-              <a href="badges.html">Components</a>
-            </li>
-            <li>
-              <a href="collapsible.html">JavaScript</a>
-            </li>
-          </ul>
+          <Link to="/resume" className="btn-flat waves-effect waves-light"> Résumé</Link>
         </div>
       </nav>
     </div>
