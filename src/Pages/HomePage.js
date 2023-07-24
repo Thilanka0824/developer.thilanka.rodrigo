@@ -5,6 +5,7 @@ import { Form } from "react-router-dom";
 import MyForm from "../Components/MyForm";
 import './HomePage.css'
 import NameAnimation from "../Components/NameAnimation";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
   const { theme } = useContext(ThemeContext);

@@ -13,7 +13,7 @@ const NavBar = () => {
           theme === "light" ? "blue lighten-4" : "blue darken-4"
         }`}
       >
-        <div class="nav-wrapper">
+        <div className="nav-wrapper">
           <Link to="/" className="brand-logo">
             <i className="material-icons">devices</i>
           </Link>

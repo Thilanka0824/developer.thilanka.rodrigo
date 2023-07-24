@@ -4,6 +4,7 @@ import NavBar from '../Components/NavBar'
 import { Outlet } from 'react-router-dom'
 import { useContext } from 'react'
 import ThemeContext from '../Hooks/themeContext'
+import Footer from '../Components/Footer'
 
 
 const GlobalLayout = () => {
@@ -16,6 +17,7 @@ const GlobalLayout = () => {
         <div className="container">
 
         <Outlet/>
+        <Footer/>
         </div>
         
 
