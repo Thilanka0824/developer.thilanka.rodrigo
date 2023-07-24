@@ -17,8 +17,8 @@ const GlobalLayout = () => {
         <div className="container">
 
         <Outlet/>
-        <Footer/>
         </div>
+        <Footer/>
         
 
     </div>

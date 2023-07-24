@@ -7,6 +7,7 @@ import './HomePage.css'
 import NameAnimation from "../Components/NameAnimation";
 import Footer from "../Components/Footer";
 
+
 const HomePage = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -22,6 +23,7 @@ const HomePage = () => {
         revealContent="Here is some more information about this product that is only revealed once clicked on."
       />
      
+   
     </div>
   );
 };
