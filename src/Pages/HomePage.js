@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useContext } from "react";
 import Card from "../Components/Card";
 import ThemeContext from "../Hooks/themeContext";
-import { Form } from "react-router-dom";
-import MyForm from "../Components/MyForm";
 import './HomePage.css'
 import NameAnimation from "../Components/NameAnimation";
-import Footer from "../Components/Footer";
 
 
-const HomePage = () => {
+
+const HomePage = ({revealContent}) => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -16,11 +14,12 @@ const HomePage = () => {
       <NameAnimation />
       
       <Card
-        className="red lighten-3"
-        title="Hi I'm Thilanka"
+        className="green lighten-3"
+        title="Frontend Developer"
         image="/TRod.png"
         content="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
-        revealContent="Here is some more information about this product that is only revealed once clicked on."
+        revealCardTitle={"Hello, I'm Thilanka"}
+        revealContent={"yes"}
       />
      
    

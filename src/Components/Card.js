@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Card.css";
 import ThemeContext from "../Hooks/themeContext";
 
-const Card = ({ title, image, content, revealContent }) => {
+const Card = ({ title, image, content, revealCardTitle, revealContent }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={`${theme} card z-depth-4`}>
@@ -16,11 +16,10 @@ const Card = ({ title, image, content, revealContent }) => {
       </div>
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">
-          Card Title<i className="material-icons right">close</i>
+          {revealCardTitle}<i className="material-icons right">close</i>
         </span>
         <p>
-          Here is some more information about this product that is only revealed
-          once clicked on.
+          {revealContent}
         </p>
       </div>
     </div>
